@@ -1,0 +1,20 @@
+// If you want to override variables do it here
+@import "variables";
+
+$enable-ltr: true;
+$enable-rtl: true;
+$primary: #003566;
+$secondary: #c8ced3;
+$success: #58a436;
+
+// Import styles
+@import "@coreui/coreui/scss/coreui";
+
+// Vendors
+@import "vendors/simplebar";
+
+// Custom styles for this theme
+@import "theme";
+
+// If you want to add custom CSS you can put it here
+@import "custom";

@@ -1,0 +1,90 @@
+body {
+    background-color: var(--cui-tertiary-bg);
+}
+
+.sidebar00 {
+    --cui-sidebar-bg: var(--dark-background);
+    --cui-body-color: var(--blue-app-l0);
+    --cui-tertiary-color: rgba(255, 255, 255, 0.38);
+    --cui-tertiary-bg: #2a303d;
+    --cui-secondary-color: rgba(255, 255, 255, 0.6);
+    --cui-secondary-bg: #323a49;
+    --cui-emphasis-color: #fff;
+    --cui-border-color: #323a49;
+    border-bottom: var(--cui-border-width) var(--cui-border-style) var(--cui-border-color) !important;
+}
+
+.my-sidebar-nav {
+    --cui-sidebar-brand-bg: var(--blue-app-3);
+    padding: 8px;
+    border-bottom: var(--cui-border-width) var(--cui-border-style) var(--cui-border-color) !important;
+}
+
+.my-sidebar-footer {
+    --cui-sidebar-brand-bg: var(--blue-app-3);
+}
+
+.siderbar-logo{
+    height: 49px;
+    width: auto;
+    margin: auto;
+}
+
+.siderbar-mini-logo{
+    height: 48px;
+    width: auto;
+    margin: auto;
+}
+
+.alert-badge{
+    background-color: #fadddd;
+    width: 40%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+.chip-input{
+    width: 100%;
+    padding: 4px;
+    background-color: var(--default-background);
+    background-clip: padding-box;
+    border: 1px solid var(--medium-black);
+    border-radius: 2px;
+    appearance: none;
+}
+
+.chip-input:focus{
+    background-color: var(--default-background);
+    background-clip: padding-box;
+    border: 1px solid var(--blue-app-2);
+    box-shadow: var(--blue-app);
+}
+
+.alert-badge{
+    background-color: #fadddd;
+    width: 40%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 767px){
+
+    .alert-badge{
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+    .alert-badge{
+        width: 60%;
+    }
+
+}

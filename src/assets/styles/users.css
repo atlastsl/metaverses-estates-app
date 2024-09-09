@@ -1,0 +1,130 @@
+
+
+.deleteUserPoint{
+    background-color: #e55353;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.defaultUserPoint{
+    background-color: var(--green-good);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.newBadge{
+    min-height: 50px;
+    margin: 0 0 15px 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(128,128,128,.4);
+    border-radius: 7px;
+}
+
+.specialTitle, .specialTitleChoose{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: black;
+}
+
+.specialTitleChoose{
+    color: var(--blue-app);
+}
+
+.tabContent{
+    border: 1px solid rgba(0,0,21,.2);
+    border-top: none;
+    border-radius: 0 0 7px 7px;
+}
+
+.circleInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 50px;
+    height: 12px;
+    width: 12px;
+}
+
+.kycButton, .kycButton-selected{
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    font-weight: 500;
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+.kycButton-selected{
+    background-color: lightgoldenrodyellow;
+}
+
+.kycButton:hover{
+    background-color: rgba(128,128,128,0.3);
+}
+
+.notProvided{
+    position: absolute;
+    background-color: rgba(249,177,21,0.8);
+    top: -15px;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.notProvidedForFile{
+    position: absolute;
+    background-color: rgba(249,177,21,0.8);
+    top: 10px;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.chooseAFile{
+    cursor: pointer;
+    padding: 3px 5px;
+    background-color: var(--blue-app);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.myFile{
+    cursor: pointer;
+    color: white;
+    background-color: #172b4d;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}
+
+.textColorBlue{
+    color: #172b4d !important;
+}
