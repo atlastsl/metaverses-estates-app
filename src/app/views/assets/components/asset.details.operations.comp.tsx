@@ -29,7 +29,7 @@ import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {OPERATION_DETAILS_PATE, STAKEHOLDER_DETAILS_PAGE} from "../../../pages/pageslist.ts";
 import {getOperationTotalAmount} from "../../../../data/operations/operations.functions.tsx";
 import {AssetsRepository} from "../../../../data/assets/assets.repository.ts";
-import {blue_mel} from "../../../components/colors.ts";
+import {blue_mel} from "../../../components/colors.tsx";
 
 export function AssetDetailsOperationsComp(props: AssetDetailsMainInfoProps): React.ReactNode {
     const { asset } = props;

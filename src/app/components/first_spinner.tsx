@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {blue_mel} from "./Colors.ts";
+import {blue_mel} from "./colors.tsx";
 import {SyncLoader} from "react-spinners";
 import * as React from "react";
 

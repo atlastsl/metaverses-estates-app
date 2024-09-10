@@ -33,7 +33,7 @@ import FirstSpinner from "../../components/first_spinner.tsx";
 import {CIcon} from "@coreui/icons-react";
 import {cilReload} from "@coreui/icons";
 import {OperationsListFormComponent, TOperationsListFormFilters} from "./components/operations.list.form.comp.tsx";
-import {blue_mel} from "../../components/colors.ts";
+import {blue_mel} from "../../components/colors.tsx";
 import {LocalstorageService, LS_ASSETS_FILTERS} from "../../../services/localstorage/localstorage.service.ts";
 import {OperationsRepository} from "../../../data/operations/operations.repository.ts";
 

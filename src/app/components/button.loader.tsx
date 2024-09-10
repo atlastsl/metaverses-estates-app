@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {blue_mel} from "./colors.ts";
+import {blue_mel} from "./colors.tsx";
 import {PuffLoader} from "react-spinners";
 import React from "react";
 

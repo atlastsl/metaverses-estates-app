@@ -34,7 +34,7 @@ import {StringsHelper} from "../../../helpers/strings.helper.ts";
 import {ASSET_DETAILS_PAGE} from "../../pages/pageslist.ts";
 import {AssetsRepository} from "../../../data/assets/assets.repository.ts";
 import {LocalstorageService, LS_ASSETS_FILTERS} from "../../../services/localstorage/localstorage.service.ts";
-import {blue_mel} from "../../components/colors.ts";
+import {blue_mel} from "../../components/colors.tsx";
 
 
 export default function AssetsListView() {
