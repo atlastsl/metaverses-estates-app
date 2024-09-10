@@ -24,7 +24,7 @@ export function getOperationTotalAmount (operation: Operation, displayCurrency =
     return displayAmount(amount, 4, displayCurrency);
 }
 
-export function getOperationTotalFees (operation: Operation, displayCurrency = false): number {
+export function getOperationTotalFees (operation: Operation, displayCurrency = false): string {
     const fees =  (operation.fees || [])
         .map(amount => amount.value_usd)
         .filter(x => x !== undefined)
