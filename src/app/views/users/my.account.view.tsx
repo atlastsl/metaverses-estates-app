@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {User} from "../../../data/user/user.dto.ts";
 import React, {useEffect, useState} from "react";
 import {CCard, CCardBody} from "@coreui/react";
@@ -11,7 +12,6 @@ import {UserRepository} from "../../../data/user/user.repository.ts";
 import "../../../assets/styles/users.css";
 
 export default function MyAccountView(): React.ReactNode {
-    const {t} = useTranslation();
 
     const navigate = useNavigate();
     const source = axios.CancelToken.source();

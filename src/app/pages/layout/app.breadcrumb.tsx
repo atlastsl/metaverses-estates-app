@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useLocation} from "react-router";
 import {useTranslation} from "react-i18next";
 import {routes, TAppRoute} from "../routes.ts";

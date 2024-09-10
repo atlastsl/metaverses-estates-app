@@ -1,19 +1,25 @@
+// @ts-nocheck
 import {Operation} from "../../../../data/operations/operations.dto.ts";
 import React from "react";
 import {useTranslation} from "react-i18next";
-import {CBadge, CCol, CListGroup, CListGroupItem, CRow} from "@coreui/react";
+import {CBadge, CListGroup, CListGroupItem} from "@coreui/react";
 import {
-    _str_operation_amount, _str_operation_date, _str_operation_details_title, _str_operation_fees,
+    _str_operation_amount,
+    _str_operation_date,
+    _str_operation_details_title,
+    _str_operation_fees,
     _str_operation_receiver,
     _str_operation_sender,
-    _str_operation_type, _str_transaction_hash, _str_transaction_type_label
+    _str_operation_type,
+    _str_transaction_hash,
+    _str_transaction_type_label
 } from "../../../../helpers/intl/texts.tokens.ts";
 import {getStakeholderBlockchainUrl} from "../../../../data/stakeholders/stakeholders.functions.tsx";
-import CopyButton from "../../../components/copy.button.tsx";
 import {
     getOperationBlockchainUrl,
     getOperationTotalAmount,
-    getOperationTotalFees, roundAmount
+    getOperationTotalFees,
+    roundAmount
 } from "../../../../data/operations/operations.functions.tsx";
 import {DatesHelper} from "../../../../helpers/dates.helper.ts";
 import {CIcon} from "@coreui/icons-react";

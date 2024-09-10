@@ -103,7 +103,7 @@
   "asset_metadata_history_title": "Anciennes valeurs de la métadonnée",
   "operation_sender": "Expéditeur",
   "operation_receiver": "Destinataire",
-  "operation_amount": "Montant ($)",
+  "operation_amount": "Montant",
   "operation_type": "Type opération",
   "operation_date": "Date",
   "asset_operations_title": "Opérations",
@@ -129,5 +129,7 @@
   "metadata_size_": "Taille",
   "metadata_lands_": "Parcelles",
   "metadata_owner_": "Propriétaire",
-  "asset_main_info_title": "Infos principales"
+  "asset_main_info_title": "Infos principales",
+  "assets_list_sort_by_nb_operations_asc": "Nb Opérations (Ordre croissant)",
+  "assets_list_sort_by_nb_operations_desc": "Nb Opérations (Ordre décroissant)"
 }

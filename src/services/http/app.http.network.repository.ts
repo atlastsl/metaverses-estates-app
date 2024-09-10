@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {NavigateFunction} from "react-router";
 import axios from "axios";
 

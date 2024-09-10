@@ -103,7 +103,7 @@
   "asset_metadata_history_title": "Metadata old values history",
   "operation_sender": "Sender",
   "operation_receiver": "Recipient",
-  "operation_amount": "Amount ($)",
+  "operation_amount": "Amount",
   "operation_type": "Operation type",
   "operation_date": "Date",
   "asset_operations_title": "Operations",
@@ -129,5 +129,7 @@
   "metadata_size_": "Size",
   "metadata_lands_": "Parcels",
   "metadata_owner_": "Owner",
-  "asset_main_info_title": "Principal info"
+  "asset_main_info_title": "Principal info",
+  "assets_list_sort_by_nb_operations_asc": "Nb of operations (Asc)",
+  "assets_list_sort_by_nb_operations_desc": "Nb of operations (Desc)"
 }

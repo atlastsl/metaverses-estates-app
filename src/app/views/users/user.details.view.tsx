@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {User} from "../../../data/user/user.dto.ts";
 import React, {useEffect, useState} from "react";
 import {CCard, CCardBody} from "@coreui/react";

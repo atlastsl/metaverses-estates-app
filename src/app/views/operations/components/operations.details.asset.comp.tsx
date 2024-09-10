@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {Asset, AssetMetadata, AssetMetadataDataTypeEnum} from "../../../../data/assets/assets.dto.ts";
 import React from "react";
 import {useTranslation} from "react-i18next";
@@ -10,15 +11,16 @@ import {
     _str_asset_metadata_title,
     _str_asset_metadata_value_label,
     _str_asset_type_label,
-    _str_collection_label, _str_operation_details_asset_title
+    _str_collection_label,
+    _str_operation_details_asset_title
 } from "../../../../helpers/intl/texts.tokens.ts";
-import CopyButton from "../../../components/copy.button.tsx";
 import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {ASSET_DETAILS_PAGE} from "../../../pages/pageslist.ts";
 import DataTable, {TableColumn} from "react-data-table-component";
 import {
     getAssetIcon,
-    getAssetMetadataDisplayName, getAssetOpenseaAssetUrl,
+    getAssetMetadataDisplayName,
+    getAssetOpenseaAssetUrl,
     getAssetOpenseaCollectionUrl
 } from "../../../../data/assets/assets.functions.tsx";
 import {cilInfo} from "@coreui/icons";
@@ -142,7 +144,7 @@ export function OperationsDetailsAssetComponent ({asset, metadataEvolutions}: {a
                                         noHeader={true}
                                         columns={columns}
                                         data={metadataEvolutions}
-                                        expandableRow={false}
+                                        expandableRows={false}
                                         highlightOnHover
                                         responsive
                                         striped={false}

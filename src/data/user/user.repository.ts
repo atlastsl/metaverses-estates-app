@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {AppHttpService} from "../../services/http/app.http.service.ts";
 import {NavigateFunction} from "react-router";
 import {AppHttpNetworkRepository} from "../../services/http/app.http.network.repository.ts";

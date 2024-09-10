@@ -18,9 +18,9 @@ export default defineConfig({
   build: {
     rollupOptions:{
       output: {
-        assetFileNames: `metaverses-estates-logs/assets/[name]-[hash][extname]`,
-        chunkFileNames: `metaverses-estates-logs/assets/[name]-[hash].js`,
-        entryFileNames: `metaverses-estates-logs/assets/[name]-[hash].js`,
+        assetFileNames: `metaverses-estates-app/assets/[name]-[hash][extname]`,
+        chunkFileNames: `metaverses-estates-app/assets/[name]-[hash].js`,
+        entryFileNames: `metaverses-estates-app/assets/[name]-[hash].js`,
       },
     },
   },

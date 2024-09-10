@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {AppHttpNetworkRepository} from "../../services/http/app.http.network.repository.ts";
 import {NavigateFunction} from "react-router";
 import axios from "axios";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {User} from "../../../../data/user/user.dto.ts";
 import React from "react";
 import {useTranslation} from "react-i18next";

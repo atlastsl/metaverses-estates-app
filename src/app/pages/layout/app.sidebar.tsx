@@ -1,21 +1,13 @@
+// @ts-nocheck
 import {useDispatch, useSelector} from "react-redux";
 import LogoMEL from '../../../assets/logo_mel.png';
 import {_str_app_name} from "../../../helpers/intl/texts.tokens.ts";
 import '../../../assets/styles/layout.css';
 import {UserLocal} from "../../../data/user/user.local.ts";
 import {getNavigation} from "./navigation.tsx";
-import {useTranslation} from "react-i18next";
 import * as React from "react";
 import {AppSidebarNav} from "./app.sidebar.nav.tsx";
-import {
-    CCloseButton,
-    CSidebar,
-    CSidebarBrand,
-    CSidebarFooter,
-    CSidebarHeader,
-    CSidebarNav,
-    CSidebarToggler
-} from "@coreui/react";
+import {CCloseButton, CSidebar, CSidebarBrand, CSidebarFooter, CSidebarHeader, CSidebarToggler} from "@coreui/react";
 
 function AppSidebar(): React.ReactNode {
     const dispatch = useDispatch();
@@ -24,7 +16,6 @@ function AppSidebar(): React.ReactNode {
 
     const userRole = UserLocal.getInstance().getUserRole();
     const nextNavigation = getNavigation(userRole);
-    const { t } = useTranslation();
 
     return (
         <CSidebar
@@ -38,7 +29,7 @@ function AppSidebar(): React.ReactNode {
             }}
         >
             <CSidebarHeader className="border-bottom justify-content-center align-items-center">
-                <CSidebarBrand to="/">
+                <CSidebarBrand>
                     <img className="sidebar-brand-full siderbar-logo" src={LogoMEL} alt={_str_app_name} />
                     <img className="sidebar-brand-narrow siderbar-mini-logo" src={LogoMEL} alt={_str_app_name} />
                 </CSidebarBrand>

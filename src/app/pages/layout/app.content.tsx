@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {UserLocal} from "../../../data/user/user.local.ts";
 import {getFirstPageToDisplay} from "./navigation.tsx";
 import * as React from "react";

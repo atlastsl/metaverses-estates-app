@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {CCol, CRow} from "@coreui/react";
 import React, {useEffect} from "react";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';

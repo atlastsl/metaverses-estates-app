@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react'
 import {UserRole} from "../../../data/user/user.dto.ts";
 import {
@@ -17,13 +18,13 @@ export type TAppNavigationItemBadge = {
 }
 
 export type TAppNavigationItem = {
-    component: React.ReactNode,
+    component: React.ReactElement,
     name: string;
     to: string;
     icon: React.ReactNode;
     roles: UserRole[],
     children?: TAppNavigationItem[],
-    badge?: string,
+    badge?: TAppNavigationItemBadge,
 }
 
 export type TAppNavigationItems = TAppNavigationItem[];

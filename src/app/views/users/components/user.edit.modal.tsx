@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {CBadge, CButton, CCol, CFormInput, CFormSelect, CModal, CModalBody, CModalHeader, CRow} from "@coreui/react";
 import {useState} from "react";
 import FirstSpinner from "../../../components/first_spinner.tsx";

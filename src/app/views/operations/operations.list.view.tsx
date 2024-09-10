@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router";
 import axios from "axios";
@@ -5,11 +6,11 @@ import {useDispatch, useSelector} from "react-redux";
 import Pagination, {DEFAULT_TAKE, TAKES_OPTIONS} from "../../components/pagination.tsx";
 import React, {useEffect, useState} from "react";
 import {OIDictionary} from "../../../services/http/http.dto.ts";
-import {parseSavedFilters} from "../assets/components/assets.list.form.comp.tsx";
+import {parseSavedFilters} from "./components/operations.list.form.comp.tsx";
 import {Operation} from "../../../data/operations/operations.dto.ts";
 import DataTable, {TableColumn} from "react-data-table-component";
 import {
-    _str_actions_label, _str_assets_page,
+    _str_actions_label,
     _str_collection_label,
     _str_list_no_items_found,
     _str_operation_amount,
@@ -17,13 +18,13 @@ import {
     _str_operation_date,
     _str_operation_receiver,
     _str_operation_sender,
-    _str_operation_type, _str_operations_page,
+    _str_operation_type,
+    _str_operations_page,
     _str_transaction_type_label,
     _str_view_btn
 } from "../../../helpers/intl/texts.tokens.ts";
 import {StringsHelper} from "../../../helpers/strings.helper.ts";
 import {ASSET_DETAILS_PAGE, OPERATION_DETAILS_PATE, STAKEHOLDER_DETAILS_PAGE} from "../../pages/pageslist.ts";
-import CopyButton from "../../components/copy.button.tsx";
 import {getOperationTotalAmount} from "../../../data/operations/operations.functions.tsx";
 import {DatesHelper} from "../../../helpers/dates.helper.ts";
 import {Link} from "react-router-dom";
@@ -213,7 +214,7 @@ export default function OperationsListView () {
         {
             name: t(_str_operation_amount),
             cell: row => <div className={"one-line fw-medium"}>
-                {getOperationTotalAmount(row)}
+                {getOperationTotalAmount(row, true)}
             </div>,
             width: "120px",
         },

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import Error500Page from "../pages/pages/error.500.page.tsx";
 

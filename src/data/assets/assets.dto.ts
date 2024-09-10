@@ -15,7 +15,7 @@ export enum AssetTypeEnum {
     District = 'district',
 }
 
-export class AssetUrl {
+export interface AssetUrl {
     name: string;
     url: string;
 }

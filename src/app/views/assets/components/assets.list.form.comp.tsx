@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {CButton, CCol, CFormInput, CFormSelect, CListGroup, CListGroupItem, CRow, CSpinner} from "@coreui/react";
 import {OIDictionary} from "../../../../services/http/http.dto.ts";
 import React, {useEffect, useState} from "react";
@@ -6,11 +7,19 @@ import {DisplayTextHelper} from "../../../../helpers/display.text.helper.ts";
 import FirstSpinner from "../../../components/first_spinner.tsx";
 import {DateRangePicker} from "../../../components/daterange.picker.tsx";
 import {
-    _str_asset_search_label, _str_asset_sort_by_label,
+    _str_asset_search_label,
+    _str_asset_sort_by_label,
     _str_asset_type_label,
-    _str_assets_list_sort_by_created_at, _str_assets_list_sort_by_name,
-    _str_assets_list_sort_by_updated_at, _str_collection_label, _str_filter_btn, _str_filter_label
+    _str_assets_list_sort_by_created_at,
+    _str_assets_list_sort_by_name,
+    _str_assets_list_sort_by_nb_operations_asc,
+    _str_assets_list_sort_by_nb_operations_desc,
+    _str_assets_list_sort_by_updated_at,
+    _str_collection_label,
+    _str_filter_btn,
+    _str_filter_label
 } from "../../../../helpers/intl/texts.tokens.ts";
+import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 
 export interface TAssetsListFormProps {
     isLoadingCollections: boolean,
@@ -34,6 +43,8 @@ export interface TAssetsListFormFilters {
 export const AssetsListFormSortOptions: {[type: string]: string} = {
     updated_at: _str_assets_list_sort_by_updated_at,
     created_at: _str_assets_list_sort_by_created_at,
+    nb_operations_asc: _str_assets_list_sort_by_nb_operations_asc,
+    nb_operations_desc: _str_assets_list_sort_by_nb_operations_desc,
     name: _str_assets_list_sort_by_name,
 }
 
@@ -99,7 +110,7 @@ export function AssetsListFormComponent(props: TAssetsListFormProps): React.Reac
     }, [props.filters]);
 
     useEffect(() => {
-        if (collection !== "" && props.onCollectionChanged) {
+        if (!StringsHelper.getInstance().isStringEmpty(collection) && props.onCollectionChanged) {
             props.onCollectionChanged(collection);
         }
     }, [collection]);

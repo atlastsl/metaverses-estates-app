@@ -27,6 +27,6 @@ i18n
             loadPath: `/metaverses-estates-app/locales/{{lng}}/{{ns}}.json`
         }
     })
-    .then(r  => console.log("i18n Init Done"));
+    .then(()  => console.log("i18n Init Done"));
 
 export default i18n;

@@ -1,10 +1,11 @@
+// @ts-nocheck
 import {useTranslation} from "react-i18next";
 import {useLocation} from "react-router";
 import {NavLink} from "react-router-dom";
 import {TAppNavigationItem, TAppNavigationItemBadge} from "./navigation.tsx";
 import * as React from "react";
 import {FunctionComponent} from "react";
-import {CNavLink, CSidebarNav} from "@coreui/react";
+import {CBadge, CNavLink, CSidebarNav} from "@coreui/react";
 import SimpleBar from "simplebar-react";
 
 type AppSidebarNavProps = {

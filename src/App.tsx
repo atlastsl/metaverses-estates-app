@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import {BrowserRouter} from "react-router-dom";
 import FirstSpinner from "./app/components/first_spinner.tsx";

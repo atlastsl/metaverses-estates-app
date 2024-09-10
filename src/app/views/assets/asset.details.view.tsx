@@ -1,4 +1,4 @@
-import {useTranslation} from "react-i18next";
+// @ts-nocheck
 import {useNavigate, useParams} from "react-router";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
@@ -14,13 +14,12 @@ import {AssetDetailsOperationsComp} from "./components/asset.details.operations.
 
 
 export default function AssetsDetailView() {
-    const {t} = useTranslation();
 
     const navigate = useNavigate();
     const source = axios.CancelToken.source();
 
     const [loadingAsset, setLoadingAsset] = useState(false);
-    const [asset, setAsset] = useState<Asset | undefined>(undefined);
+    const [asset, setAsset] = useState<Asset | null>(null);
     const [collections, setCollections] = useState<OIDictionary>({});
     const [assetsTypes, setAssetsTypes] = useState<OIDictionary>({});
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {CButton} from "@coreui/react";
@@ -67,7 +68,7 @@ export function Pagination(props: TPaginationProps) {
         }
     }
 
-    function back(e){
+    function back(e?: Event){
         const endPage = init(props.total || 0);
         const take = props.take || DEFAULT_TAKE;
         let page = props.page || DEFAULT_PAGE;

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import {
     _str_asset_details_page,

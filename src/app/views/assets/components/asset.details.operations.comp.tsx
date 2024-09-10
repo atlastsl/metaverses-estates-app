@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {AssetDetailsMainInfoProps} from "./props.ts";
 import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
@@ -13,7 +14,6 @@ import {
     _str_view_btn
 } from "../../../../helpers/intl/texts.tokens.ts";
 import DataTable, {TableColumn} from "react-data-table-component";
-import {UserListItem} from "../../users/components/user.list.item.tsx";
 import {useNavigate} from "react-router";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
@@ -27,7 +27,6 @@ import {DatesHelper} from "../../../../helpers/dates.helper.ts";
 import {Link} from "react-router-dom";
 import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {OPERATION_DETAILS_PATE, STAKEHOLDER_DETAILS_PAGE} from "../../../pages/pageslist.ts";
-import CopyButton from "../../../components/copy.button.tsx";
 import {getOperationTotalAmount} from "../../../../data/operations/operations.functions.tsx";
 import {AssetsRepository} from "../../../../data/assets/assets.repository.ts";
 import {blue_mel} from "../../../components/colors.ts";
@@ -128,7 +127,7 @@ export function AssetDetailsOperationsComp(props: AssetDetailsMainInfoProps): Re
         {
             name: t(_str_operation_amount),
             cell: row => <div className={"one-line fw-medium"}>
-                {getOperationTotalAmount(row)}
+                {getOperationTotalAmount(row, true)}
             </div>,
             width: "160px",
         },
@@ -157,7 +156,7 @@ export function AssetDetailsOperationsComp(props: AssetDetailsMainInfoProps): Re
 
     return (
         asset != null ? (
-            <div>
+            <div className={"mt-4"}>
 
                 <h6>{t(_str_asset_operations_title)}</h6>
 

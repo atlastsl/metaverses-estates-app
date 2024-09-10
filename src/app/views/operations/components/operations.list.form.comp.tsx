@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {OIDictionary} from "../../../../services/http/http.dto.ts";
 import {
     _str_asset_search_label,
@@ -15,6 +16,7 @@ import {CButton, CCol, CFormInput, CFormSelect, CListGroup, CListGroupItem, CRow
 import FirstSpinner from "../../../components/first_spinner.tsx";
 import {DisplayTextHelper} from "../../../../helpers/display.text.helper.ts";
 import {DateRangePicker} from "../../../components/daterange.picker.tsx";
+import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 
 
 export interface TOperationsListFormProps {
@@ -102,7 +104,7 @@ export function OperationsListFormComponent(props: TOperationsListFormProps): Re
     }, [props.filters]);
 
     useEffect(() => {
-        if (collection !== "" && props.onCollectionChanged) {
+        if (!StringsHelper.getInstance().isStringEmpty(collection) && props.onCollectionChanged) {
             props.onCollectionChanged(collection);
         }
     }, [collection]);

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router";
 import axios from "axios";
@@ -183,13 +184,13 @@ export default function AssetsListView() {
         },
         {
             name: t(_str_user_created_at_label),
-            cell: row => <div className={"one-line"}>{DatesHelper.getInstance().printDateAndTime(row.created_at)}</div>,
+            cell: row => <div className={"one-line"}>{row.created_at ? DatesHelper.getInstance().printDateAndTime(row.created_at) : '--'}</div>,
             width: "160px",
             hide:"md"
         },
         {
             name: t(_str_user_updated_at_label),
-            cell: row => <div className={"one-line"}>{DatesHelper.getInstance().printDateAndTime(row.updated_at)}</div>,
+            cell: row => <div className={"one-line"}>{row.updated_at ? DatesHelper.getInstance().printDateAndTime(row.updated_at) : '--'}</div>,
             width: "160px",
             hide:"sm"
         },

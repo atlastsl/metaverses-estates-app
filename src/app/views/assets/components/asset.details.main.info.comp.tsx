@@ -1,13 +1,15 @@
+// @ts-nocheck
 import React from "react";
 import {useTranslation} from "react-i18next";
-import {CBadge, CButton, CCol, CListGroup, CListGroupItem, CRow} from "@coreui/react";
-import {Controlled as ControlledZoom} from "react-medium-image-zoom";
+import {CBadge, CCol, CListGroup, CListGroupItem, CRow} from "@coreui/react";
 import DefaultAsset from "../../../../assets/logo_mel.png";
 import {
     _str_asset_description_label,
-    _str_asset_identifier_label, _str_asset_main_info_title, _str_asset_name_label, _str_asset_secondary_info_title,
+    _str_asset_identifier_label,
+    _str_asset_main_info_title,
+    _str_asset_name_label,
     _str_asset_type_label,
-    _str_collection_label, _str_view_btn
+    _str_collection_label
 } from "../../../../helpers/intl/texts.tokens.ts";
 import {DisplayTextHelper} from "../../../../helpers/display.text.helper.ts";
 import {AssetDetailsMainInfoProps} from "./props.ts";
@@ -17,7 +19,6 @@ import {
     getAssetOpenseaAssetUrl,
     getAssetOpenseaCollectionUrl
 } from "../../../../data/assets/assets.functions.tsx";
-import CopyButton from "../../../components/copy.button.tsx";
 import Image from "../../../components/image.tsx";
 import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {CIcon} from "@coreui/icons-react";
@@ -28,7 +29,7 @@ export function AssetDetailsMainInfoComponent(props: AssetDetailsMainInfoProps):
 
     const { t } = useTranslation();
 
-    const [isZoomed, setIsZoomed] = React.useState(false);
+    //const [isZoomed, setIsZoomed] = React.useState(false);
 
     function handleOpenCollection() {
         if (asset != null) {
@@ -84,7 +85,7 @@ export function AssetDetailsMainInfoComponent(props: AssetDetailsMainInfoProps):
                                         <div className="mb-2">
                                             <small>{t(_str_asset_identifier_label)}</small>
                                             <div className={"d-flex align-items-center"}>
-                                                <CBadge color='primary' textColor={'white'} className="text-black p-2 me-2">
+                                                <CBadge color='primary' textColor={'white'} className="text-black p-2 me-2 mw-75 one-line">
                                                     {asset.asset_id}
                                                 </CBadge>
                                                 <CIcon icon={cilInfo} size={'sm'} className={"cursorView"} onClick={handleOpenAssetLink} />

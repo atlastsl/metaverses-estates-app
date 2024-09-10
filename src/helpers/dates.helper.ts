@@ -18,7 +18,7 @@ export class DatesHelper {
 
     private printDate (_date: Date | string | number): string {
         const date = this.normalizeDate(_date);
-        let day = date.getUTCDate(), month = date.getUTCMonth()+1, year = date.getUTCFullYear();
+        let day: number | string = date.getUTCDate(), month: number | string = date.getUTCMonth()+1, year: number | string = date.getUTCFullYear();
         day = day.toString(10).padStart(2, "0");
         month = month.toString(10).padStart(2, "0");
         return day + "/" + month + "/" + year;
@@ -26,7 +26,8 @@ export class DatesHelper {
 
     private printTime (_date: Date | string | number, sec: boolean = false, ms: boolean = false): string {
         const date = this.normalizeDate(_date);
-        let hours = date.getUTCHours(), minutes = date.getUTCMinutes(), seconds = date.getUTCSeconds(), millis = date.getUTCMilliseconds();
+        let hours: number | string = date.getUTCHours(), minutes: number | string = date.getUTCMinutes(),
+            seconds: number | string = date.getUTCSeconds(), millis: number | string = date.getUTCMilliseconds();
         hours = hours.toString(10).padStart(2, "0");
         minutes = minutes.toString(10).padStart(2, "0");
         seconds = seconds.toString(10).padStart(2, "0");

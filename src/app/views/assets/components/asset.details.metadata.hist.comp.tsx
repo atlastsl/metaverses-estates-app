@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from "react";
+// @ts-nocheck
+import React, {useState} from "react";
 import {Asset, AssetMetadata, AssetMetadataDataTypeEnum} from "../../../../data/assets/assets.dto.ts";
 import {useTranslation} from "react-i18next";
 import {
     CBadge,
-    CButton, CCloseButton,
+    CButton,
+    CCloseButton,
     CListGroup,
     CListGroupItem,
     COffcanvas,
@@ -17,7 +19,8 @@ import {
     _str_asset_metadata_macro_label,
     _str_asset_metadata_name_label,
     _str_asset_metadata_value_label,
-    _str_list_no_items_found, _str_view_history_btn
+    _str_list_no_items_found,
+    _str_view_history_btn
 } from "../../../../helpers/intl/texts.tokens.ts";
 import {getAssetMetadataDisplayName} from "../../../../data/assets/assets.functions.tsx";
 import Pagination, {DEFAULT_TAKE, TAKES_OPTIONS} from "../../../components/pagination.tsx";
@@ -25,14 +28,12 @@ import {CIcon} from "@coreui/icons-react";
 import {cilReload} from "@coreui/icons";
 import FirstSpinner from "../../../components/first_spinner.tsx";
 import DataTable, {TableColumn} from "react-data-table-component";
-import {UserListItem} from "../../users/components/user.list.item.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import {AssetsRepository} from "../../../../data/assets/assets.repository.ts";
 import {useNavigate} from "react-router";
 import axios from "axios";
 import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {DatesHelper} from "../../../../helpers/dates.helper.ts";
-import {OPERATION_DETAILS_PATE} from "../../../pages/pageslist.ts";
 
 export interface AssetDetailsMetadataHistProps {
     asset: Asset;

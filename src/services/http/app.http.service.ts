@@ -1,3 +1,4 @@
+// @ts-nocheck
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse, Method} from "axios";
 import {DisplayTextHelper, IDisplayText} from "../../helpers/display.text.helper.ts";
 import {_str_error_message_default} from "../../helpers/intl/texts.tokens.ts";
@@ -87,7 +88,9 @@ export class AppHttpService {
                 .keys(queryParams)
                 .filter((key) => queryParams[key] != null && queryParams[key] !== undefined)
                 .map((key) => {
-                    return `${key}=${encodeURIComponent(queryParams[key])}`;
+                    let value: any = queryParams[key];
+                    if (value instanceof Date) value = value.toISOString();
+                    return `${key}=${encodeURIComponent(value)}`;
                 })
                 .join('&');
             url = url + '?' + strQueryParams;

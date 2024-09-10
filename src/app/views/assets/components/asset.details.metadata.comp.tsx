@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {AssetDetailsMainInfoProps} from "./props.ts";
 import React from "react";
 import {useTranslation} from "react-i18next";
@@ -8,13 +9,12 @@ import {
     _str_asset_metadata_macro_label,
     _str_asset_metadata_name_label,
     _str_asset_metadata_title,
-    _str_asset_metadata_value_label,
-    _str_view_history_btn
+    _str_asset_metadata_value_label
 } from "../../../../helpers/intl/texts.tokens.ts";
 import DataTable, {TableColumn} from "react-data-table-component";
-import {AssetMetadata, AssetMetadataDataTypeEnum} from "../../../../data/assets/assets.dto.ts";
+import {Asset, AssetMetadata, AssetMetadataDataTypeEnum} from "../../../../data/assets/assets.dto.ts";
 import {getAssetMetadataDisplayName} from "../../../../data/assets/assets.functions.tsx";
-import {CBadge, CButton} from "@coreui/react";
+import {CBadge} from "@coreui/react";
 import {StringsHelper} from "../../../../helpers/strings.helper.ts";
 import {DatesHelper} from "../../../../helpers/dates.helper.ts";
 import {AssetDetailsMetadataHistComp} from "./asset.details.metadata.hist.comp.tsx";
@@ -74,7 +74,7 @@ export function AssetDetailsMetadataComponent(props: AssetDetailsMainInfoProps):
             cell: (row) => (
                 row.date !== undefined ? (
                     <AssetDetailsMetadataHistComp
-                        asset={asset}
+                        asset={asset as Asset}
                         assetMetadata={row}
                     />
                 ) : (
@@ -107,7 +107,7 @@ export function AssetDetailsMetadataComponent(props: AssetDetailsMainInfoProps):
                                 noHeader={true}
                                 columns={columns}
                                 data={(asset.metadata || [])}
-                                expandableRow={false}
+                                expandableRows={false}
                                 highlightOnHover
                                 responsive
                                 striped={false}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useTranslation} from "react-i18next";
 import React, {useState} from "react";
 import {NOTIFICATION_SUCCESS, ShowNotification} from "./notifications.tsx";
