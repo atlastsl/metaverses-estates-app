@@ -87,6 +87,7 @@ export class AppHttpService {
             const strQueryParams = Object
                 .keys(queryParams)
                 .filter((key) => queryParams[key] != null && queryParams[key] !== undefined)
+                .filter((key) => !StringsHelper.getInstance().isStringEmpty(queryParams[key].toString()))
                 .map((key) => {
                     let value: any = queryParams[key];
                     if (value instanceof Date) value = value.toISOString();

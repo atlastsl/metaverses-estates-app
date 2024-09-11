@@ -114,3 +114,5 @@ export const _str_operation_asset_label = 'operation_asset_label';
 export const _str_asset_main_info_title = 'asset_main_info_title';
 export const _str_assets_list_sort_by_nb_operations_asc = 'assets_list_sort_by_nb_operations_asc';
 export const _str_assets_list_sort_by_nb_operations_desc = 'assets_list_sort_by_nb_operations_desc';
+export const _str_operations_list_sort_by_amount_desc = 'assets_list_sort_by_amount_desc';
+export const _str_operations_list_sort_by_amount_asc = 'assets_list_sort_by_amount_asc';

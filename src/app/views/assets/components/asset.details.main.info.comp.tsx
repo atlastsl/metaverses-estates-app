@@ -85,7 +85,7 @@ export function AssetDetailsMainInfoComponent(props: AssetDetailsMainInfoProps):
                                         <div className="mb-2">
                                             <small>{t(_str_asset_identifier_label)}</small>
                                             <div className={"d-flex align-items-center"}>
-                                                <CBadge color='primary' textColor={'white'} className="text-black p-2 me-2 mw-75 one-line">
+                                                <CBadge color='primary' textColor={'white'} className="p-2 me-2 mw-75 one-line">
                                                     {asset.asset_id}
                                                 </CBadge>
                                                 <CIcon icon={cilInfo} size={'sm'} className={"cursorView"} onClick={handleOpenAssetLink} />

@@ -131,5 +131,7 @@
   "metadata_owner_": "Owner",
   "asset_main_info_title": "Principal info",
   "assets_list_sort_by_nb_operations_asc": "Nb of operations (Asc)",
-  "assets_list_sort_by_nb_operations_desc": "Nb of operations (Desc)"
+  "assets_list_sort_by_nb_operations_desc": "Nb of operations (Desc)",
+  "assets_list_sort_by_amount_desc": "Amount (Desc)",
+  "assets_list_sort_by_amount_asc": "Amount (Asc)"
 }

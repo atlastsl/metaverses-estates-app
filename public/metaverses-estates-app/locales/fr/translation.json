@@ -131,5 +131,7 @@
   "metadata_owner_": "Propriétaire",
   "asset_main_info_title": "Infos principales",
   "assets_list_sort_by_nb_operations_asc": "Nb Opérations (Ordre croissant)",
-  "assets_list_sort_by_nb_operations_desc": "Nb Opérations (Ordre décroissant)"
+  "assets_list_sort_by_nb_operations_desc": "Nb Opérations (Ordre décroissant)",
+  "assets_list_sort_by_amount_desc": "Montant (Ordre décroissant)",
+  "assets_list_sort_by_amount_asc": "Montant (Ordre croissant)"
 }

@@ -2,7 +2,7 @@
 import {Asset, AssetMetadata, AssetMetadataDataTypeEnum} from "../../../../data/assets/assets.dto.ts";
 import React from "react";
 import {useTranslation} from "react-i18next";
-import {CListGroup, CListGroupItem} from "@coreui/react";
+import {CBadge, CListGroup, CListGroupItem} from "@coreui/react";
 import {
     _str_asset_identifier_label,
     _str_asset_metadata_empty_list,
@@ -38,6 +38,12 @@ export function OperationsDetailsAssetComponent ({asset, metadataEvolutions}: {a
     function handleOpenCollectionExternalUrl () {
         if (asset != null) {
             window.open(getAssetOpenseaCollectionUrl(asset), '_blank')
+        }
+    }
+
+    function handleOpenAssetPage() {
+        if (asset != null) {
+            window.open(StringsHelper.getInstance().replaceAll(ASSET_DETAILS_PAGE, ':asset_id', asset.id), '_blank')
         }
     }
 
@@ -101,12 +107,10 @@ export function OperationsDetailsAssetComponent ({asset, metadataEvolutions}: {a
                         <div className={"mb-2"}>
                             <small>{t(_str_asset_identifier_label)}</small>
                             <div className={"d-flex align-items-center"}>
-                                <a className={"fw-medium me-2 one-line w-75"}
-                                   href={StringsHelper.getInstance().replaceAll(ASSET_DETAILS_PAGE, ':asset_id', asset.id)}
-                                   target={'_blank'} rel={'noreferrer noopener'}>
+                                <CBadge color='primary' textColor={'white'} className="cursorView p-2 me-2 mw-75 one-line">
                                     {asset.asset_id}
-                                </a>
-                                <CIcon icon={cilInfo} size={'sm'}
+                                </CBadge>
+                                <CIcon icon={cilInfo} size={'sm'} className={"cursorView"}
                                        onClick={() => handleOpenAssetExternalUrl()}/>
                             </div>
                         </div>

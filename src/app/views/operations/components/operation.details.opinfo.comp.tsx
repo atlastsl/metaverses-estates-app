@@ -100,7 +100,7 @@ export function OperationDetailsOpInfoComponent ({operation}: {operation: Operat
                         <div className={"mb-2"}>
                             <small>{t(_str_operation_amount)}</small>
                             <div className={"d-flex align-items-center"}>
-                                <div className={"fw-medium me-2"}>${getOperationTotalAmount(operation)}</div>
+                                <div className={"fw-medium me-2"}>{getOperationTotalAmount(operation, true)}</div>
                                 {operation.amount.map((amount, index) => {
                                     return (
                                         <CBadge size={"sm"} color={"secondary"} textColor={"dark"} className={"p-1 me-2"}
@@ -115,7 +115,7 @@ export function OperationDetailsOpInfoComponent ({operation}: {operation: Operat
                         <div className={"mb-2"}>
                             <small>{t(_str_operation_fees)}</small>
                             <div className={"d-flex align-items-center"}>
-                                <div className={"fw-medium me-2"}>${getOperationTotalFees(operation)}</div>
+                                <div className={"fw-medium me-2"}>{getOperationTotalFees(operation, true)}</div>
                                 {operation.fees.map((amount, index) => {
                                     return (
                                         <CBadge size={"sm"} color={"secondary"} textColor={"dark"} className={"p-1 me-2"}

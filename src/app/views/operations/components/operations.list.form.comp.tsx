@@ -5,7 +5,7 @@ import {
     _str_asset_sort_by_label,
     _str_collection_label, _str_filter_btn,
     _str_filter_label,
-    _str_operation_type,
+    _str_operation_type, _str_operations_list_sort_by_amount_asc, _str_operations_list_sort_by_amount_desc,
     _str_operations_list_sort_by_date_asc,
     _str_operations_list_sort_by_date_desc,
     _str_transaction_type_label
@@ -43,6 +43,8 @@ export interface TOperationsListFormFilters {
 export const OperationsListListFormSortOptions: {[type: string]: string} = {
     date_desc: _str_operations_list_sort_by_date_desc,
     date_asc: _str_operations_list_sort_by_date_asc,
+    amount_desc: _str_operations_list_sort_by_amount_desc,
+    amount_asc: _str_operations_list_sort_by_amount_asc,
 }
 
 export function parseSavedFilters (savedFilters: string | null) : TOperationsListFormFilters | null {
