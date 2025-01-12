@@ -27,7 +27,7 @@ export interface Operation {
     transaction_hash: string;
     operation_type: OperationType;
     transaction_type: TransactionType;
-    chain: string;
+    blockchain: string;
     block_number: number;
     block_hash: string;
     mvt_date: Date;
