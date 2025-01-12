@@ -22,7 +22,7 @@ export function getAssetOpenseaCollectionUrl (asset: Asset): string {
 }
 
 export function getAssetOpenseaAssetUrl (asset: Asset): string {
-    return `https://opensea.io/assets/${(asset.chain || 'ethereum')}/${asset.contract}/${asset.asset_id}`;
+    return `https://opensea.io/assets/${(asset.blockchain || 'ethereum')}/${asset.contract}/${asset.asset_id}`;
 }
 
 export function getAssetMetadataDisplayName (assetMetadata: AssetMetadata): string {

@@ -30,7 +30,7 @@ export function OperationDetailsOpInfoComponent ({operation}: {operation: Operat
 
     function handleOpenStakeholderBlockchainUrl(address?: string) {
         if (address && operation != null) {
-            window.open(getStakeholderBlockchainUrl(address, operation.chain), '_blank');
+            window.open(getStakeholderBlockchainUrl(address, operation.blockchain), '_blank');
         }
     }
 
@@ -52,7 +52,7 @@ export function OperationDetailsOpInfoComponent ({operation}: {operation: Operat
                             <small>{t(_str_operation_sender)}</small>
                             <div className={"d-flex align-items-center"}>
                                 <a className={"fw-medium me-2"}
-                                   href={getStakeholderBlockchainUrl(operation.sender, operation.chain)}
+                                   href={getStakeholderBlockchainUrl(operation.sender, operation.blockchain)}
                                    target={'_blank'} rel={'noreferrer noopener'}>
                                     {operation.sender}
                                 </a>
@@ -65,7 +65,7 @@ export function OperationDetailsOpInfoComponent ({operation}: {operation: Operat
                             <small>{t(_str_operation_receiver)}</small>
                             <div className={"d-flex align-items-center"}>
                                 <a className={"fw-medium me-2"}
-                                   href={getStakeholderBlockchainUrl(operation.recipient, operation.chain)}
+                                   href={getStakeholderBlockchainUrl(operation.recipient, operation.blockchain)}
                                    target={'_blank'} rel={'noreferrer noopener'}>
                                     {operation.recipient}
                                 </a>

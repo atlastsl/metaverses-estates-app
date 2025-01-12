@@ -35,7 +35,7 @@ export function getOperationTotalFees (operation: Operation, displayCurrency = f
 }
 
 export function getOperationBlockchainUrl (operation: Operation): string {
-    switch (operation.chain.toLowerCase()) {
+    switch (operation.blockchain.toLowerCase()) {
         case 'ethereum':
             return `https://etherscan.io/tx/${operation.transaction_hash}`;
         default:

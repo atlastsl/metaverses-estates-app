@@ -58,7 +58,7 @@ export interface Asset {
     id: string;
     collection: string;
     contract: string;
-    chain?: string;
+    blockchain?: string;
     asset_id: string;
     type: AssetTypeEnum;
     name: string;
